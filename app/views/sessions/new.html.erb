@@ -1,0 +1,29 @@
+<h1>Sessions#new</h1>
+
+<div>
+  <h1>ログイン</h1>
+  <%= form_for(:session, url: login_path) do |f| %>
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: '2文字以上', autocomplete: 'off' %>
+    </p>
+    <%= f.submit "Log in" %>
+  <% end %>
+</div>
+<br>
+<div>
+  <%= link_to '新規登録へ', signup_path %>
+</div>
+<!--
+<script>
+  //戻れなくする
+  window.addEventListener('popstate', ()=>{
+    history.pushState(null, null, null);
+    window.alert('戻るとページが正常に表示されません。\nログインか新規登録をしてください。');
+  });
+</script>
+-->

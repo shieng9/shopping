@@ -1,0 +1,30 @@
+
+<p>新規登録</p>
+
+<div>
+    <%= form_for @user, html: {onsubmit: 'return false;'} do |user| %>
+        <%= user.label(:name, '名前') %><br>
+        <span id="err_name">再度入力してください</span>
+        <%= user.text_field :name, placeholder: '名前を入力', autocomplete: 'off', maxlength: '10', size: '12x1' %>
+        <!-- <%= @user.errors.details[:name] %> -->
+        <hr>
+        <%= user.label(:email, 'Email') %><br>
+        <span id="err_email" >再度入力してください</span>
+        <%= user.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
+        <hr>
+        <%= user.label(:password, 'パスワード') %><br>
+        <span id="err_pass" >再度入力してください</span>
+        <%= user.password_field :password, placeholder: '2文字以上', autocomplete: 'off' %>
+        <hr>
+        <%= user.label(:password_confirmation, 'パスワード確認用') %><br>
+        <span id="err_passcon" >再度入力してください</span>
+        <%= user.password_field :password_confirmation, placeholder: '上記と同じ', autocomplete: 'off' %>  
+        <hr>
+        <%= user.button '登録', type: 'button', onclick: 'submit();' %>
+    <% end %>
+</div>
+<%= render 'users/error_form' %>
+<div>
+    <p><%= link_to 'ログイン画面へ', login_path %></p>
+    <p><%= link_to 'リロード', signup_path %></p>
+</div>
