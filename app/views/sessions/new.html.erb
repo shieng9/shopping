@@ -1,22 +1,35 @@
-<h1>Sessions#new</h1>
-
-<div>
-  <h1>ログイン</h1>
-  <%= form_for(:session, url: login_path) do |f| %>
-    <p>
-      <%= f.label :email %>
-      <%= f.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
-    </p>
-    <p>
-      <%= f.label :password %>
-      <%= f.password_field :password, placeholder: '2文字以上', autocomplete: 'off' %>
-    </p>
-    <%= f.submit "Log in" %>
-  <% end %>
-</div>
-<br>
-<div>
-  <%= link_to '新規登録へ', signup_path %>
+<div id="login_page">
+  <div id="login_container">
+    <div>
+      <h1 id="login_title">ログイン画面</h1>
+      <hr>
+      <div id="login_form_area">
+        <!--ログインform-->
+        <%= form_for(:session, url: login_path) do |f| %>
+          <p>
+            <%= f.label(:email, 'Email:') %>
+            <%= f.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
+          </p>
+          <p>
+            <%= f.label(:password, 'Password:') %>
+            <%= f.password_field :password, placeholder: '2文字以上', autocomplete: 'off' %>
+          </p>
+          <%= f.submit "Log in" %>
+        <% end %>
+        <!--ログイン失敗時のエラーメッセージ-->
+        <div>
+          <% flash.each do |key, value| %>
+            <br>
+            <div class="err_messe alert-<%= key %>"><%= value %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <%= link_to '新規登録へ', signup_path %>
+    </div>
+  </div>
 </div>
 <!--
 <script>

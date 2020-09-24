@@ -1,6 +1,7 @@
 
 <% if @user.errors.any? %>
-  <div class = "alert">
+  <p>エラーの原因</p>
+  <div class="err_messe">
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>

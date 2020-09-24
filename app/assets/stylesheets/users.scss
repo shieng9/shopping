@@ -2,22 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#err_name {
-    display: none;
-    font: red;
+#signup_page {
+    display: flex;
+    padding: 10px;
+    margin: 0px;
+    justify-content: center;
+
+    #signup_container {
+        background-color: rgb(116, 226, 226);
+        width: clamp(410px, 90vw, 600px);
+        margin: 10px;
+    }    
 }
 
-#err_email {
-    display: none;
-    font: red;
+#title_area {
+    padding: 0px 20px;
 }
 
-#err_pass {
-    display: none;
-    font: red;
+#signup_title {
+    text-align: center;
 }
 
-#err_passcon {
-    display: none;
-    font: red;
+#signup_form_area {
+    display: flex;
+    justify-content: center;
+
+    padding: 0px 100px;
+}
+
+#err_box {
+    padding: 0px 40px;
 }

@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   //   id取得
-  let t_goods = document.getElementById("t_goods");
-  let t_quantity = document.getElementById("t_quantity");
-  let allTotal = document.getElementById("allTotal");
+  const t_goods = document.getElementById("t_goods");
+  const t_quantity = document.getElementById("t_quantity");
+  const allTotal = document.getElementById("allTotal");
   //   const changeQuantity = document.getElementsByClassName("changeQuantity");
 
   //   formのid取得
-  let product_goods = document.getElementById("product_goods");
-  let product_quantity = document.getElementById("product_quantity");
-  let product_totalPrice = document.getElementById("product_totalPrice");
+  const product_goods = document.getElementById("product_goods");
+  const product_quantity = document.getElementById("product_quantity");
+  const product_totalPrice = document.getElementById("product_totalPrice");
 
   //   商品の数量変更時
   document.addEventListener("input", () => {

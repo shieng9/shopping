@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body {
+    font-family: "Century Gothic", Futura, sans-serif;
+    margin: 0px;
+}
+  
+.err_messe {
+    color: red;
+}
+
+/* h1 {
+    text-align: center;
+} */

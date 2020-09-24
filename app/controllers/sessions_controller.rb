@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to products_url
     else
+      flash.now[:error] = 'EmailまたはPasswordが間違っています'
+      # flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end

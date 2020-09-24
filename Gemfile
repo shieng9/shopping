@@ -61,3 +61,6 @@ gem 'rails-i18n'
 
 # ターミナルでの、「rails c」で日本語使用可能
 gem 'rb-readline'
+
+# ログイン時エラーメッセージ表示
+gem 'devise'
