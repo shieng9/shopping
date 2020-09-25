@@ -3,16 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const t_goods = document.getElementById("t_goods");
   const t_quantity = document.getElementById("t_quantity");
   const allTotal = document.getElementById("allTotal");
-  //   const changeQuantity = document.getElementsByClassName("changeQuantity");
 
   //   formのid取得
   const product_goods = document.getElementById("product_goods");
   const product_quantity = document.getElementById("product_quantity");
   const product_totalPrice = document.getElementById("product_totalPrice");
+  const formSubmit = document.getElementById("formSubmit");
 
   //   商品の数量変更時
   document.addEventListener("input", () => {
-    // console.log(t_goods.textContent);
+    if (t_goods) {
+      product_goods.value = t_goods.textContent;
+      product_quantity.value = t_quantity.textContent;
+      product_totalPrice.value = allTotal.textContent;
+    }
+  });
+  // devtoolsで変更されても正しく処理されるようにする
+  formSubmit.addEventListener("click", () => {
     if (t_goods) {
       product_goods.value = t_goods.textContent;
       product_quantity.value = t_quantity.textContent;

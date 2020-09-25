@@ -122,7 +122,7 @@ class Menu extends React.Component {
       if (t_goods[i] !== "") {
         return (
           <li key={g.toString()}>
-            <span id={g}>{g}</span>
+            <span id={g}>{g + " "}</span>
             <span id={g + "の数"}>{t_quantity[i] + "個"}</span>
           </li>
         );
@@ -134,7 +134,7 @@ class Menu extends React.Component {
 
     return (
       <div id="renderTotal">
-        <h3>◎選択中の商品</h3>
+        <h3>〜選択中の商品〜</h3>
         <ul>{totalItems}</ul>
         <p>支払い合計金額： {allTotal}円</p>
         <div id="willFormData">

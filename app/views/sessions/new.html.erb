@@ -5,17 +5,19 @@
       <hr>
       <div id="login_form_area">
         <!--ログインform-->
-        <%= form_for(:session, url: login_path) do |f| %>
-          <p>
-            <%= f.label(:email, 'Email:') %>
-            <%= f.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
-          </p>
-          <p>
-            <%= f.label(:password, 'Password:') %>
-            <%= f.password_field :password, placeholder: '2文字以上', autocomplete: 'off' %>
-          </p>
-          <%= f.submit "Log in" %>
-        <% end %>
+        <div>
+          <%= form_for(:session, url: login_path) do |f| %>
+            <p>
+              <%= f.label(:email, 'Email:') %>
+              <%= f.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>
+            </p>
+            <p>
+              <%= f.label(:password, 'Password:') %>
+              <%= f.password_field :password, placeholder: '2文字以上', autocomplete: 'off', size: '30x1' %>
+            </p>
+            <%= f.submit "Log in" %>
+          <% end %>
+        </div>
         <!--ログイン失敗時のエラーメッセージ-->
         <div>
           <% flash.each do |key, value| %>
