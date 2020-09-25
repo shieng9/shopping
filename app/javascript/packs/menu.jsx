@@ -1,6 +1,6 @@
-import React, { Fragment, StrictMode, Suspense } from "react"; // React.Componentをextendsするのに必要
+import React, { Fragment, StrictMode, Suspense } from "react";
 import PropTypes from "prop-types";
-import ReactDOM from "react-dom"; // これのおかげで「ReactDOM.render()」が使用可能
+import ReactDOM from "react-dom";
 
 function List(props) {
   return (
@@ -179,15 +179,6 @@ Menu.propTypes = {
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <Menu />,
-    // document.body.appendChild(document.createElement('div'))
     document.getElementById("root")
   );
 });
-
-// window.addEventListener("popstate", () => {
-//   ReactDOM.render(
-//     <Menu />,
-//     // document.body.appendChild(document.createElement('div'))
-//     document.getElementById("root")
-//   );
-// });

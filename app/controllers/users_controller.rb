@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       redirect_to @user
-      # redirect_to login_path
+      # 新規登録後に自動でログイン
     else
       render 'sign_up'
     end

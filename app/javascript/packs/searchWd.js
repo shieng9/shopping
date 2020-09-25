@@ -14,6 +14,7 @@ goods_search.addEventListener("input", () => {
   });
 });
 
+// 検索しているキーワードがないものは消す
 function reset() {
   [...document.getElementsByClassName("hide")].forEach((el) => {
     el.classList.remove("hide");

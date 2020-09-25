@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # 新規登録
   get    '/signup',  to: 'users#sign_up'
 
-  root 'products#index'
+  root 'sessions#new'
 
   # ユーザーのデータベース
   resources :users do

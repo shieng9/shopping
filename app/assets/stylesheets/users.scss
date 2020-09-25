@@ -11,25 +11,31 @@
     #signup_container {
         background-color: rgb(116, 226, 226);
         width: clamp(410px, 90vw, 600px);
+        padding: 30px;
         margin: 10px;
-    }    
-}
 
-#title_area {
-    padding: 0px 20px;
-}
+        #title_area {
+            padding: 0px 20px;
 
-#signup_title {
-    text-align: center;
-}
-
-#signup_form_area {
-    display: flex;
-    justify-content: center;
-
-    padding: 0px 100px;
-}
-
-#boxes {
-    padding: 0px 40px;
+            #signup_title {
+                text-align: center;
+                border-bottom: 1px solid;
+            }            
+        }
+        
+        #signup_form_area {
+            display: flex;
+            justify-content: center;
+        
+            padding: 0px 100px;
+        }
+        
+        #boxes {
+            padding: 0px 40px;
+        
+            #err_box {
+                margin-left: 10vw;
+            }
+        }
+    }   
 }

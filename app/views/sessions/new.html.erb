@@ -2,7 +2,6 @@
   <div id="login_container">
     <div>
       <h1 id="login_title">ログイン画面</h1>
-      <hr>
       <div id="login_form_area">
         <!--ログインform-->
         <div>
@@ -27,18 +26,9 @@
         </div>
       </div>
     </div>
-    <br>
-    <div>
-      <%= link_to '新規登録へ', signup_path %>
+    <div class="link_box">
+      <p><%= link_to '新規登録へ', signup_path %></p>
+      <p><%= link_to 'リロード', login_path %></p>
     </div>
   </div>
 </div>
-<!--
-<script>
-  //戻れなくする
-  window.addEventListener('popstate', ()=>{
-    history.pushState(null, null, null);
-    window.alert('戻るとページが正常に表示されません。\nログインか新規登録をしてください。');
-  });
-</script>
--->

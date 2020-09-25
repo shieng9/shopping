@@ -1,7 +1,8 @@
 
 <% if @user.errors.any? %>
-  <p>エラーの原因</p>
   <div class="err_messe">
+    <br>
+    <p>ーー 登録失敗の原因 ーー</p>
     <ul>
       <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>

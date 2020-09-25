@@ -15,7 +15,7 @@
  */
 
 
- body {
+body {
     font-family: "Century Gothic", Futura, sans-serif;
     margin: 0px;
 }
@@ -24,6 +24,6 @@
     color: red;
 }
 
-/* h1 {
-    text-align: center;
-} */
+.link_box {
+    margin-top: 50px;
+}

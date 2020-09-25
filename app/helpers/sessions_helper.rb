@@ -14,8 +14,8 @@ module SessionsHelper
         end
     end
 
-    # before_actionでよく使われます。
-    #受け取ったユーザーがログイン中のユーザーと一致すればtrueを返す
+    # before_actionでよく使う
+    # 受け取ったユーザーがログイン中のユーザーと一致すればtrueを返す
     def current_user?(user)
         user == current_user
     end
@@ -31,5 +31,4 @@ module SessionsHelper
         session.delete(:user_id)
         @current_user = nil
     end
-
 end

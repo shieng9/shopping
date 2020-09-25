@@ -2,7 +2,6 @@
   <div id="signup_container">
     <div id="title_area">
       <h1 id="signup_title">新規登録</h1>
-      <hr>
     </div>
     <div id="signup_form_area">
       <%= form_for @user, html: {onsubmit: 'return false;'} do |user| %>
@@ -17,7 +16,7 @@
       <div>
         <div><%= user.label(:email, 'Email') %></div>
         <% if @user.errors.details[:email].any? %>
-        <span class="err_messe" >再度入力してください</span>
+        <span class="err_messe">再度入力してください</span>
         <% end %>
         <%= user.email_field :email, placeholder: '(例) example@example.com', size: '30x1' %>   
       </div>
@@ -25,7 +24,7 @@
       <div>
         <div><%= user.label(:password, 'パスワード') %></div>
         <% if @user.errors.details[:password].any? %>
-        <span class="err_messe" >再度入力してください</span>
+        <span class="err_messe">再度入力してください</span>
         <% end %>
         <%= user.password_field :password, placeholder: '2文字以上', autocomplete: 'off', size: '30x1' %>     
       </div>
@@ -33,7 +32,7 @@
       <div>
         <div><%= user.label(:password_confirmation, 'パスワード確認用') %></div>
         <% if @user.errors.details[:password_confirmation].any? %>
-        <span class="err_messe" >再度入力してください</span>
+        <span class="err_messe">再度入力してください</span>
         <% end %>
         <%= user.password_field :password_confirmation, placeholder: '上記と同じ', autocomplete: 'off', size: '30x1' %>   
       </div>
@@ -42,10 +41,10 @@
       <% end %>
     </div>
     <div id="boxes">
-      <div>
+      <div id="err_box">
         <%= render 'users/error_form' %>
       </div>
-      <div>
+      <div class="link_box">
         <p><%= link_to 'ログイン画面へ', login_path %></p>
         <p><%= link_to 'リロード', signup_path %></p>
       </div>

@@ -9,12 +9,31 @@
 
 #product_page {
   padding: 20px;
+
+  #formArea {
+    background-color: rgb(179, 165, 165);
+    position: fixed;
+    top: 250px;
+    right: 60px;
+    z-index: 2;
+    width: 240px;
+    height: 0px;
+    text-align: center;
+  
+    #formSubmit {
+      border: outset 4px silver;
+      width: 100%;
+      height: 30px;
+    }
+  }
 }
 
+// キーワード検索で使用
 .hide {
   display: none;
 }
 
+// 各商品の情報が記載される場所
 .goods_list {
   display: flex;
 
@@ -32,6 +51,7 @@
   }
 }
 
+// 選択中の商品を表示
 #totalBox {
   position: fixed;
   top: 0px;
@@ -49,30 +69,14 @@
     background-color: white;
     border: inset 4px silver;
     padding: 1px 20px 1px 50px;
+
+    #willFormData {
+      display: none;
+    }    
   }
 }
 
-#willFormData {
-  display: none;
-}
-
-#formArea {
-  background-color: rgb(179, 165, 165);
-  position: fixed;
-  top: 250px;
-  right: 60px;
-  z-index: 2;
-  width: 240px;
-  height: 0px;
-  text-align: center;
-
-  #formSubmit {
-    border: outset 4px silver;
-    width: 100%;
-    height: 30px;
-  }
-}
-
+// ログオフ中のボタン
 #alter_formSubmit {
   position: fixed;
   top: 250px;

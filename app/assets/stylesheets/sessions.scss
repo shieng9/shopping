@@ -8,26 +8,27 @@
     padding: 10px;
     margin: 0px;
     justify-content: center;
-    // font-size: clamp(16px, 3vw, 40px);
+
     #login_container {
-        height: 300px;
-        width: clamp(490px, 90vw, 530px);
+        height: 350px;
+        width: clamp(485px, 90vw, 530px);
         min-width: 485px;
         background-color: rgb(174, 252, 226);
         padding: 50px;
         margin: 10px;
+
+        #login_title {
+            text-align: center;
+            border-bottom: 1px solid;
+        }
+        
+        #login_form_area {
+            padding: 0px 100px;
+            margin-top: 30px;
+
+            #session_email {
+                margin-left: 29px;
+            }            
+        }
     }    
-}
-
-#login_title {
-    text-align: center;
-}
-
-#login_form_area {
-    padding: 0px 100px;
-    margin-top: 30px;
-}
-
-#session_email {
-    margin-left: 29px;
 }
