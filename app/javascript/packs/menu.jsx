@@ -169,11 +169,11 @@ class Menu extends React.Component {
 }
 
 Menu.propTypes = {
-  goods: PropTypes.string,
-  prices: PropTypes.number,
-  quantity: PropTypes.number,
-  total: PropTypes.number,
-  pictures: PropTypes.string,
+  goods: PropTypes.arrayOf(PropTypes.string),
+  prices: PropTypes.arrayOf(PropTypes.number),
+  quantity: PropTypes.arrayOf(PropTypes.number),
+  total: PropTypes.arrayOf(PropTypes.number),
+  pictures: PropTypes.arrayOf(PropTypes.string),
 };
 
 document.addEventListener("DOMContentLoaded", () => {
