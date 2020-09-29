@@ -88,13 +88,13 @@ class Menu extends React.Component {
   handleChange(e, i) {
     // 整数かつ0以上100以下かつ3桁のみ可
     if (
-      Number.isInteger(e.target.value - 0) &&
-      0 <= e.target.value &&
-      e.target.value < 101 &&
+      Number.isInteger(Number(e.target.value)) &&
+      0 <= Number(e.target.value) &&
+      Number(e.target.value) < 101 &&
       e.target.value.length < 4
     ) {
       let quantity = this.state.quantity.slice();
-      quantity[i] = e.target.value;
+      quantity[i] = Number(e.target.value);
       let total = this.state.total.slice();
       total[i] = this.state.prices[i] * quantity[i];
 
